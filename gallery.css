@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: bottom; 
+    text-align: center;
+    height: 100vh;
+    background-image: url("https://imageupload.io/ib/uQ77GwBTuZEF9bN_1695373838.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+  
+  .image-container {
+    position: absolute;
+    bottom: 250px;
+    left: 19%;
+    width: 250px;
+    height: 250px;
+    transform-style: preserve-3d;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.7s;
+  }
+  
+  .image-container span {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 50%;
+    width: 100%;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+  }
+  
+  .image-container span img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .btn-container {
+    position: absolute;
+    top: 85%;
+    left: 21%;
+    width: 100%;
+  }
+
+  .btn {
+    border: none;
+    padding: 0.5rem 2rem;
+    background: rgba(17, 17, 137, 0.824);
+    color: #fff;
+    font-size: 12px;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .btn:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -10px;
+    left: -10px;
+    /* background: teal; */
+    border-top: 4px solid darkblue;
+    border-left: 4px solid darkblue;
+    transition: all 0.25s;
+  }
+  
+  .btn:hover:before,
+  .btn:hover:after {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .btn:after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 4px solid darkblue;
+    border-right: 4px solid darkblue;
+    transition: all 0.25s;
+  }
+  
+  #prev {
+    left: -54%;
+  }
+  
+  #next {
+    right: 33%;
+  }
+  
+  .btn:hover {
+    filter: brightness(1.5);
+  }
